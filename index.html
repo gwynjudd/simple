@@ -1,0 +1,43 @@
+<html>
+
+<body>
+    <button id="one">
+One
+</button>
+    <button id="two">
+Two
+</button>
+    <button id="three">
+Three
+</button>
+    <button id="back">
+Back
+</button>
+
+    <script>
+    one.addEventListener("click", function () {
+	location.hash = "#id=one";
+});
+
+two.addEventListener("click", function () {
+	location.hash = "#id=two";
+});
+
+three.addEventListener("click", function () {
+	location.hash = "#id=three";
+});
+
+back.addEventListener("click", function () {
+	history.back();
+  alert('back');
+});
+
+window.addEventListener("beforeunload", function (e) {
+    var message = "hi";
+    e.returnValue = message;
+    return message;
+});
+</script>
+</body>
+
+</html>
